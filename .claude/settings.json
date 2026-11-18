@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(.dev.vars)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Bash(pnpm wrangler deploy *)",
+      "Bash(npx wrangler deploy *)",
+      "Bash(wrangler deploy *)",
+      "Bash(pnpm wrangler secret *)",
+      "Bash(pnpm wrangler d1 * --remote)",
+      "Bash(pnpm wrangler d1 * --remote *)"
+    ],
+    "ask": [
+      "Bash(git push *)"
+    ]
+  }
+}

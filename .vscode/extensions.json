@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "anthropic.claude-code",
+    "EditorConfig.EditorConfig",
+    "github.vscode-github-actions"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  // Corrige con ESLint al guardar
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript", "typescript", "vue"],
+
+  // Usa la versión de TypeScript del proyecto, no la de VS Code
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // Importaciones con rutas relativas cortas y sin extensión
+  "typescript.preferences.importModuleSpecifier": "shortest",
+
+  // No buscar ni mostrar resultados en carpetas generadas
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.wrangler": true,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/worker-configuration.d.ts": true
+  },
+
+  // Agrupa en el explorador los archivos que van juntos
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, .npmrc",
+    "wrangler.jsonc": "worker-configuration.d.ts, .dev.vars, .dev.vars.example",
+    "eslint.config.mjs": "commitlint.config.mjs, lefthook.yml, .editorconfig"
+  }
+}

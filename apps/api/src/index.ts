@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 import { zValidator } from '@hono/zod-validator'
-import { BatchChanges, Change } from './schemas'
+import { BatchChanges } from './schemas'
 
 const app = new Hono<{ Bindings: CloudflareBindings }>()
   .basePath('/api')

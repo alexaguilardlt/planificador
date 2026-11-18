@@ -1,0 +1,18 @@
+# Comprobaciones automáticas en cada commit.
+# Se instalan solas con `pnpm install` gracias al script "prepare".
+
+pre-commit:
+  parallel: true
+  commands:
+    eslint:
+      glob: "*.{js,mjs,cjs,ts}"
+      run: pnpm exec eslint --fix --no-warn-ignored {staged_files}
+      stage_fixed: true
+    tipos-api:
+      glob: "apps/api/**/*.ts"
+      run: pnpm exec tsc --noEmit -p apps/api
+
+commit-msg:
+  commands:
+    commitlint:
+      run: pnpm exec commitlint --edit {1}
